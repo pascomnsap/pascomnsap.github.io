@@ -1,27 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PASCOM - NSAP</title>
-    <link rel="icon" href="images/icons/pascom-icon.png" type="image/png" />
 
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PASCOM - NSAP</title>
+  <link rel="icon" href="images/icons/pascom-icon.png" type="image/png" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    /* Montserrat e Poppins */
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background: linear-gradient(-45deg, #5281ee, #1d3473, #202f49, #2367d5);
+      /* background: linear-gradient(-45deg, #4166bd, #13234d, #101824, #1c53ac); */
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 700% 700%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+
+    main {
+      margin-top: 0px;
+    }
+
+    .links {
+      margin-top: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .links a img {
+      width: 80px;
+    }
+
+    h1, 
+    h2 {
+      color: white;
+      text-align: center;
+
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+      margin: 20px 0px -10px 0px;
+    }
+
+    .art-imgs {
+      /* display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 300px 150px; */
+      gap: 20px;
+    }
+
+    .box-imgs {
+      position: relative;
+
+      max-width: 100%;
+      height: 100px;
+
+      box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+      border-radius: 10px;
+
+      /* overflow-y: hidden; */
+    }
+
+    .imgs-main {
+      position: absolute;
+      /* top: -415px;
+        left: 10px; */
+
+      max-width: 200px;
+      height: auto;
+
+      z-index: 2;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .download-black {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+
+      width: 50px;
+      height: auto;
+    }
+
+    .black .download-white {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+
+      filter: invert(100%);
+      width: 50px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 768px) {
       body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
 
-        background-color: rgb(0, 0, 0, 0.5);
+        animation: gradientAnimation 5s ease infinite;
       }
 
       main {
-        margin-top: 20px;
+        width: 100%;
+        max-width: 90%;
+        margin: 0;
+        margin-bottom: 20px;
       }
 
       .links {
-        margin-top: 10px;
+        margin-top: 20px;
 
         display: flex;
         align-items: center;
@@ -31,13 +153,12 @@
       }
 
       .links a img {
-        width: 80px;
+        width: 50px;
       }
 
       .art-imgs {
-        /* display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 300px 150px; */
+        display: flex;
+        flex-direction: column;
         gap: 20px;
       }
 
@@ -50,19 +171,115 @@
         box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
         border-radius: 10px;
 
-        /* overflow-y: hidden; */
+        overflow-y: hidden;
+        overflow-x: hidden;
       }
 
       .imgs-main {
         position: absolute;
-        /* top: -415px;
-        left: 10px; */
+        /* top: -415px; */
+        left: 10px;
 
-        max-width: 200px;
+        max-width: 300px;
         height: auto;
 
         z-index: 2;
       }
+
+      .imgs-main-2 {
+        position: absolute;
+        top: -40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 500px;
+        height: auto;
+
+        z-index: 2;
+      }
+
+      .container-box-imgs-rd {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        /* gap: 10px; */     
+        
+        background: linear-gradient(-85deg, black 50%, white 50%);
+        border-radius: 10px;
+      }
+
+      .box-imgs-rd {
+        position: relative;
+
+        max-width: 48%;
+        height: 120px;
+
+        box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+        border-radius: 10px;
+
+        /* overflow-y: hidden; */
+      }
+
+      .imgs-main-rd {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 150px;
+        height: auto;
+
+        z-index: 2;
+      }      
+
+      .imgs-main-rd-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 100px;
+        height: auto;
+
+        z-index: 2;
+      }      
+
+      .imgs-main-gr {
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 350px;
+        height: auto;
+
+        z-index: 2;
+      }      
+
+      .imgs-main-gr-uno {
+        position: absolute;
+        top: -550px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 750px;
+        height: auto;
+
+        z-index: 2;
+      }      
+
+      .imgs-main-gr-dual {
+        position: absolute;
+        top: -320px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 480px;
+        height: auto;
+
+        z-index: 2;
+      }      
 
       .white {
         background-color: white;
@@ -77,7 +294,7 @@
         bottom: 10px;
         right: 10px;
 
-        width: 50px;
+        width: 25px;
         height: auto;
       }
 
@@ -87,212 +304,507 @@
         right: 10px;
 
         filter: invert(100%);
-        width: 50px;
+        width: 25px;
         height: auto;
       }
 
-      @media screen and (max-width: 768px) {
-        body {
-          padding: 0;
-          margin: 0;
-          width: 100%;
-          box-sizing: border-box;
-          overflow: hidden;
-        }
+      .download-black-rd {
+        position: absolute;
+        top: 5px;
+        left: -80px;
 
-        main {
-          width: 90%;
-        }
-
-        .links {
-          margin-top: 10px;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: row;
-          gap: 10px;
-        }
-
-        .links a img {
-          width: 50px;
-        }
-
-        .art-imgs {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        .box-imgs {
-          position: relative;
-
-          max-width: 100%;
-          height: 100px;
-
-          box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
-          border-radius: 10px;
-
-          overflow-y: hidden;
-        }
-
-        .imgs-main {
-          position: absolute;
-          /* top: -415px; */
-          left: 10px;
-
-          max-width: 300px;
-          height: auto;
-
-          z-index: 2;
-        }
-
-        .white {
-          background-color: white;
-        }
-
-        .black {
-          background-color: black;
-        }
-
-        .download-black {
-          position: absolute;
-          bottom: 10px;
-          right: 10px;
-
-          width: 25px;
-          height: auto;
-        }
-
-        .black .download-white {
-          position: absolute;
-          bottom: 10px;
-          right: 10px;
-
-          filter: invert(100%);
-          width: 25px;
-          height: auto;
-        }
+        width: 25px;
+        height: auto;
       }
-    </style>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="links">
-          <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/icons/instagram-icon.svg" alt="instagram-icon" />
-          </a>
+      .download-white-rd {
+        position: absolute;
+        top: 5px;
+        right: -80px;
 
-          <a href="https://www.canva.com/" target="_blank">
-            <img src="images/icons/canva-icon.svg" alt="canva-icon" />
-          </a>
-        </div>
-      </nav>
-    </header>
+        filter: invert(100%);
+        width: 25px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
 
-    <main>
-      <section>
-        <article class="art-imgs">
-          <!-- <button>
+<body>
+  <header>
+    <nav>
+      <div class="links">
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="images/icons/instagram-icon.svg" alt="instagram-icon" />
+        </a>
+
+        <a href="https://www.canva.com/" target="_blank">
+          <img src="images/icons/canva-icon.svg" alt="canva-icon" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article class="art-imgs">
+        <!-- <button>
                         <img src="images/icons/expand-black.svg" alt="">
                     </button> -->
 
-          <div class="box-imgs black">
-            <img
-              src="images/capela-layout-deitado-white.png"
-              alt="capela-layout-deitado"
-              class="imgs-main"
-            />
+        <!--------------------------------------------- Paróquia e Capela --------------------------------------------->
 
-            <a
-              href="images/capela-layout-deitado-white.png"
-              download="capela-layout-deitado-black"
-            >
-              <img
-                src="images/icons/download-icon.svg"
-                alt="download-icon"
-                class="download-white"
-              />
+        <h2>Paróquia e Capela</h2>
+        <div class="box-imgs white">
+          <img src="images/dual/dual-story-black.png" alt="dual-story-black" class="imgs-main-2" />
+
+          <a href="images/dual/dual-story-black.png" download="dual-story-black.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/dual-story-white.png" alt="dual-story-white" class="imgs-main-2" />
+
+          <a href="images/dual/dual-story-white.png" download="dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!--------------------------------------------- Paróquia e Capela GRADIENTES --------------------------------------------->
+
+        <!--------------------------------------------- GREEN --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/green/green-uno-story-black.png" alt="green-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/green/green-uno-story-black.png" download="green-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/green/green-uno-story-white.png" alt="green-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/green/green-uno-story-white.png" download="green-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/green/green-dual-story-black.png" alt="green-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/green/green-dual-story-black.png" download="green-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/green/green-dual-story-white.png" alt="green-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/green/green-dual-story-white.png" download="green-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------------- WHITE --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/white/white-uno-story-black.png" alt="white-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/white/white-uno-story-black.png" download="white-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/white/white-uno-story-white.png" alt="white-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/white/white-uno-story-white.png" download="white-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/white/white-dual-story-black.png" alt="white-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/white/white-dual-story-black.png" download="white-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/white/white-dual-story-white.png" alt="white-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/white/white-dual-story-white.png" download="white-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------------- GOLD --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/gold/gold-uno-story-black.png" alt="gold-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/gold/gold-uno-story-black.png" download="gold-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/gold/gold-uno-story-white.png" alt="gold-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/gold/gold-uno-story-white.png" download="gold-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/gold/gold-dual-story-black.png" alt="gold-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/gold/gold-dual-story-black.png" download="gold-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/gold/gold-dual-story-white.png" alt="gold-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/gold/gold-dual-story-white.png" download="gold-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------------- RED --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/red/red-uno-story-black.png" alt="red-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/red/red-uno-story-black.png" download="red-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/red/red-uno-story-white.png" alt="red-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/red/red-uno-story-white.png" download="red-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/red/red-dual-story-black.png" alt="red-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/red/red-dual-story-black.png" download="red-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/red/red-dual-story-white.png" alt="red-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/red/red-dual-story-white.png" download="red-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------------- PURPLE --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/purple/purple-uno-story-black.png" alt="purple-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/purple/purple-uno-story-black.png" download="purple-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/purple/purple-uno-story-white.png" alt="purple-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/purple/purple-uno-story-white.png" download="purple-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/purple/purple-dual-story-black.png" alt="purple-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/purple/purple-dual-story-black.png" download="purple-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/purple/purple-dual-story-white.png" alt="purple-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/purple/purple-dual-story-white.png" download="purple-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+        <!--------------------------------------------- PINK --------------------------------------------->
+        
+        <div class="box-imgs white">
+          <img src="images/dual/pink/pink-uno-story-black.png" alt="pink-uno-story-black" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/pink/pink-uno-story-black.png" download="pink-uno-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/pink/pink-uno-story-white.png" alt="pink-uno-story-white" class="imgs-main-gr-uno" />
+
+          <a href="images/dual/pink/pink-uno-story-white.png" download="pink-uno-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+        
+        <div class="box-imgs white">
+          <img src="images/dual/pink/pink-dual-story-black.png" alt="pink-dual-story-black" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/pink/pink-dual-story-black.png" download="pink-dual-story-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/dual/pink/pink-dual-story-white.png" alt="pink-dual-story-white" class="imgs-main-gr-dual" />
+
+          <a href="images/dual/pink/pink-dual-story-white.png" download="pink-dual-story-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------------------------------->
+
+
+        <!--------------------------------------------- PARÓQUIA --------------------------------------------->
+
+        <h1>Paróquia</h1>
+        <div class="box-imgs white">
+          <img src="images/paroquia/paroquia-layout-deitado-black.png" alt="paroquia-layout-deitado" class="imgs-main" />
+
+          <a href="images/paroquia/paroquia-layout-deitado-black.png" download="paroquia-layout-deitado-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/paroquia/paroquia-layout-deitado-white.png" alt="paroquia-layout-deitado" class="imgs-main" />
+
+          <a href="images/paroquia/paroquia-layout-deitado-white.png" download="paroquia-layout-deitado-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <!--------------------------------------------- CAPELA --------------------------------------------->
+
+        <h1>Capela</h1>
+        <div class="box-imgs white">
+          <img src="images/capela/capela-layout-deitado-black.png" alt="capela-layout-deitado" class="imgs-main" />
+
+          <a href="images/capela/capela-layout-deitado-black.png" download="capela-layout-deitado-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/capela/capela-layout-deitado-white.png" alt="capela-layout-deitado" class="imgs-main" />
+
+          <a href="images/capela/capela-layout-deitado-white.png" download="capela-layout-deitado-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="box-imgs white">
+          <img src="images/capela/capela-uno-deitado-black.png" alt="capela-uno-deitado" class="imgs-main" />
+
+          <a href="images/capela/capela-uno-deitado-black.png" download="capela-uno-deitado-black.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/capela/capela-uno-deitado-white.png" alt="capela-uno-deitado" class="imgs-main" />
+
+          <a href="images/capela/capela-uno-deitado-white.png" download="capela-uno-deitado-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="box-imgs white">
+          <img src="images/capela/capela-uno-black.png" alt="capela-uno" class="imgs-main" />
+
+          <a href="images/capela/capela-uno-black.png" download="capela-uno-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/capela/capela-uno-white.png" alt="capela-uno" class="imgs-main" />
+
+          <a href="images/capela/capela-uno-white.png" download="capela-uno-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="container-box-imgs-rd">
+          <div class="box-imgs-rd white">
+            <img src="images/capela/capela-arredondado-black.png" alt="capela-arredondado" class="imgs-main-rd" />
+
+            <a href="images/capela/capela-arredondado-black.png" download="capela-arredondado-black">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black-rd" />
             </a>
           </div>
 
-          <div class="box-imgs white">
-            <img
-              src="images/capela-layout-deitado-black.svg"
-              alt="capela-layout-deitado"
-              class="imgs-main"
-            />
+          <div class="box-imgs-rd black">
+            <img src="images/capela/capela-arredondado-white.png" alt="capela-arredondado" class="imgs-main-rd" />
 
-            <a
-              href="images/capela-layout-deitado-black.svg"
-              download="capela-layout-deitado-black"
-            >
-              <img
-                src="images/icons/download-icon.svg"
-                alt="download-icon"
-                class="download-black"
-              />
+            <a href="images/capela/capela-arredondado-white.png" download="capela-arredondado-white">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white-rd" />
+            </a>
+          </div>
+        </div>
+
+        <!--------------------------------------------- RCC --------------------------------------------->
+
+        <h1>RCC</h1>
+        <div class="box-imgs white">
+          <img src="images/rcc/rcc-natal-deitado-black.png" alt="rcc-natal-deitado-black" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-black.png" download="rcc-natal-deitado-black">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/rcc/rcc-natal-deitado-white.png" alt="rcc-natal-deitado-white" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-white.png" download="rcc-natal-deitado-white.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="box-imgs white">
+          <img src="images/rcc/rcc-natal-deitado-black-2.png" alt="rcc-natal-deitado-black-2" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-black-2.png" download="rcc-natal-deitado-black-2">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/rcc/rcc-natal-deitado-white-2.png" alt="rcc-natal-deitado-white-2" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-white-2.png" download="rcc-natal-deitado-white-2.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="box-imgs white">
+          <img src="images/rcc/rcc-natal-deitado-black-3.png" alt="rcc-natal-deitado-black-3" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-black-3.png" download="rcc-natal-deitado-black-3">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/rcc/rcc-natal-deitado-white-3.png" alt="rcc-natal-deitado-white-3" class="imgs-main" />
+
+          <a href="images/rcc/rcc-natal-deitado-white-3.png" download="rcc-natal-deitado-white-3.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="container-box-imgs-rd">
+          <div class="box-imgs-rd white">
+            <img src="images/rcc/rcc-natal-center-black.png"  alt="rcc-natal-center-black" class="imgs-main-rd-2" />
+
+            <a href="images/rcc/rcc-natal-center-black.png" download="rcc-natal-center-black">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black-rd" />
             </a>
           </div>
 
-          <div class="box-imgs black">
-            <img
-              src="images/capela-layout-deitado-white.svg"
-              alt="capela-layout-deitado"
-              class="imgs-main"
-            />
+          <div class="box-imgs-rd black">
+            <img src="images/rcc/rcc-natal-center-white.png" alt="rcc-natal-center-white" class="imgs-main-rd-2" />
 
-            <a href="images/capela-layout-deitado-white.svg"
-              download="capela-layout-deitado-white">
-              <img
-                src="images/icons/download-icon.svg"
-                alt="download-icon"
-                class="download-white"
-              />
+            <a href="images/rcc/rcc-natal-center-white.png" download="rcc-natal-center-white">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white-rd" />
             </a>
           </div>
+        </div>
 
-          <div class="box-imgs white">
-            <img
-              src="images/paroquia-layout-deitado-black.svg"
-              alt="paroquia-layout-deitado"
-              class="imgs-main"
-            />
+        <!--------------------------------------------- GRADIENTS/DEGRADES --------------------------------------------->
 
-            <a href="images/paroquia-layout-deitado-black.svg"
-              download="paroquia-layout-deitado-black">
-              <img
-                src="images/icons/download-icon.svg"
-                alt="download-icon"
-                class="download-black"
-              />
-            </a>
-          </div>
+        <h2>Gradients/degradês</h2>
+        <div class="box-imgs white">
+          <img src="images/gradients/gradient-green.png" alt="gradient-green" class="imgs-main-gr" />
 
-          <div class="box-imgs black">
-            <img
-              src="images/paroquia-layout-deitado-white.svg"
-              alt="paroquia-layout-deitado"
-              class="imgs-main"
-            />
+          <a href="images/gradients/gradient-green.png" download="gradient-green">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+        
+        <div class="box-imgs black">
+          <img src="images/gradients/gradient-white.png" alt="gradient-white" class="imgs-main-gr" />
 
-            <a href="images/paroquia-layout-deitado-white.svg"
-              download="paroquia-layout-deitado-white">
-              <img
-                src="images/icons/download-icon.svg"
-                alt="download-icon"
-                class="download-white"
-              />
-            </a>
-          </div>
-        </article>
-      </section>
-    </main>
+          <a href="images/gradients/gradient-white.png" download="gradient-white">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
 
-    <footer></footer>
+        <div class="box-imgs white">
+          <img src="images/gradients/gradient-gold.png" alt="gradient-gold" class="imgs-main-gr" />
 
-    <script></script>
-  </body>
+          <a href="images/gradients/gradient-gold.png" download="gradient-gold">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/gradients/gradient-red.png" alt="gradient-red" class="imgs-main-gr" />
+
+          <a href="images/gradients/gradient-red.png" download="gradient-red">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+        <div class="box-imgs white">
+          <img src="images/gradients/gradient-purple.png" alt="gradient-purple.png" class="imgs-main-gr" />
+
+          <a href="images/gradients/gradient-purple.png" download="gradient-purple.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <div class="box-imgs black">
+          <img src="images/gradients/gradient-pink.png" alt="gradient-pink.png" class="imgs-main-gr" />
+
+          <a href="images/gradients/gradient-pink.png" download="gradient-pink.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div>
+
+      </article>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script></script>
+</body>
+
 </html>
