@@ -57,7 +57,7 @@
       width: 80px;
     }
 
-    h1, 
+    h1,
     h2 {
       color: white;
       text-align: center;
@@ -65,6 +65,13 @@
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
       margin: 20px 0px -10px 0px;
+    }
+
+    p {
+      color: white;
+      text-align: left;
+
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     .art-imgs {
@@ -112,6 +119,7 @@
 
       width: 50px;
       height: auto;
+
       z-index: 10;
     }
 
@@ -123,7 +131,7 @@
       filter: invert(100%);
       width: 50px;
       height: auto;
-      
+
       z-index: 10;
     }
 
@@ -206,8 +214,8 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: row;
-        /* gap: 10px; */     
-        
+        /* gap: 10px; */
+
         background: linear-gradient(-85deg, black 50%, white 50%);
         border-radius: 10px;
       }
@@ -234,7 +242,7 @@
         height: auto;
 
         z-index: 2;
-      }      
+      }
 
       .imgs-main-rd-2 {
         position: absolute;
@@ -246,11 +254,11 @@
         height: auto;
 
         z-index: 2;
-      }      
+      }
 
       .imgs-main-gr {
         position: absolute;
-        top: -200px;
+        top: -160px;
         left: 50%;
         transform: translate(-50%, -50%);
 
@@ -258,7 +266,7 @@
         height: auto;
 
         z-index: 2;
-      }      
+      }
 
       .imgs-main-gr-uno {
         position: absolute;
@@ -270,7 +278,7 @@
         height: auto;
 
         z-index: 2;
-      }      
+      }
 
       .imgs-main-gr-dual {
         position: absolute;
@@ -282,7 +290,7 @@
         height: auto;
 
         z-index: 2;
-      }      
+      }
 
       .white {
         background-color: white;
@@ -292,6 +300,64 @@
         background-color: black;
       }
 
+      .box-imgs-nm {
+        position: relative;
+
+        max-width: 100%;
+        height: 150px;
+
+        box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+        border-radius: 10px;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+
+      .bottom-infos {
+        position: absolute;
+        width: 100%;
+        /* padding: 15px 0px; */
+        padding: 8px 0px;
+
+        /* top: 0; */
+        bottom: 0;
+        margin-top: -10px;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        /* background: linear-gradient(180deg, rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.0)); */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        z-index: 20;
+      }
+
+      .p-infos {
+        font-size: 18px;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        padding-left: 10px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 50%;
+      }
+
+      .download-btt {
+        position: absolute;
+        top: auto;
+        right: 10px;
+
+        width: 25px;
+        height: auto;
+
+        z-index: 10;
+      }
+
       .download-black {
         position: absolute;
         bottom: 10px;
@@ -299,7 +365,7 @@
 
         width: 25px;
         height: auto;
-        
+
         z-index: 10;
       }
 
@@ -311,7 +377,7 @@
         filter: invert(100%);
         width: 25px;
         height: auto;
-        
+
         z-index: 10;
       }
 
@@ -322,7 +388,7 @@
 
         width: 25px;
         height: auto;
-        
+
         z-index: 10;
       }
 
@@ -334,7 +400,7 @@
         filter: invert(100%);
         width: 25px;
         height: auto;
-        
+
         z-index: 10;
       }
     }
@@ -385,7 +451,7 @@
         <!--------------------------------------------- Paróquia e Capela GRADIENTES --------------------------------------------->
 
         <!--------------------------------------------- GREEN --------------------------------------------->
-        
+
         <div class="box-imgs white">
           <img src="images/dual/green/green-uno-story-black.png" alt="green-uno-story-black" class="imgs-main-gr-uno" />
 
@@ -401,9 +467,10 @@
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
-          <img src="images/dual/green/green-dual-story-black.png" alt="green-dual-story-black" class="imgs-main-gr-dual" />
+          <img src="images/dual/green/green-dual-story-black.png" alt="green-dual-story-black"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/green/green-dual-story-black.png" download="green-dual-story-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -411,7 +478,8 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/green/green-dual-story-white.png" alt="green-dual-story-white" class="imgs-main-gr-dual" />
+          <img src="images/dual/green/green-dual-story-white.png" alt="green-dual-story-white"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/green/green-dual-story-white.png" download="green-dual-story-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -421,7 +489,7 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <!--------------------------------------------- WHITE --------------------------------------------->
-        
+
         <div class="box-imgs white">
           <img src="images/dual/white/white-uno-story-black.png" alt="white-uno-story-black" class="imgs-main-gr-uno" />
 
@@ -437,9 +505,10 @@
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
-          <img src="images/dual/white/white-dual-story-black.png" alt="white-dual-story-black" class="imgs-main-gr-dual" />
+          <img src="images/dual/white/white-dual-story-black.png" alt="white-dual-story-black"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/white/white-dual-story-black.png" download="white-dual-story-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -447,7 +516,8 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/white/white-dual-story-white.png" alt="white-dual-story-white" class="imgs-main-gr-dual" />
+          <img src="images/dual/white/white-dual-story-white.png" alt="white-dual-story-white"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/white/white-dual-story-white.png" download="white-dual-story-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -457,7 +527,7 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <!--------------------------------------------- GOLD --------------------------------------------->
-        
+
         <div class="box-imgs white">
           <img src="images/dual/gold/gold-uno-story-black.png" alt="gold-uno-story-black" class="imgs-main-gr-uno" />
 
@@ -473,7 +543,7 @@
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
           <img src="images/dual/gold/gold-dual-story-black.png" alt="gold-dual-story-black" class="imgs-main-gr-dual" />
 
@@ -493,7 +563,7 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <!--------------------------------------------- RED --------------------------------------------->
-        
+
         <div class="box-imgs white">
           <img src="images/dual/red/red-uno-story-black.png" alt="red-uno-story-black" class="imgs-main-gr-uno" />
 
@@ -509,7 +579,7 @@
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
           <img src="images/dual/red/red-dual-story-black.png" alt="red-dual-story-black" class="imgs-main-gr-dual" />
 
@@ -529,9 +599,10 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <!--------------------------------------------- PURPLE --------------------------------------------->
-        
+
         <div class="box-imgs white">
-          <img src="images/dual/purple/purple-uno-story-black.png" alt="purple-uno-story-black" class="imgs-main-gr-uno" />
+          <img src="images/dual/purple/purple-uno-story-black.png" alt="purple-uno-story-black"
+            class="imgs-main-gr-uno" />
 
           <a href="images/dual/purple/purple-uno-story-black.png" download="purple-uno-story-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -539,15 +610,17 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/purple/purple-uno-story-white.png" alt="purple-uno-story-white" class="imgs-main-gr-uno" />
+          <img src="images/dual/purple/purple-uno-story-white.png" alt="purple-uno-story-white"
+            class="imgs-main-gr-uno" />
 
           <a href="images/dual/purple/purple-uno-story-white.png" download="purple-uno-story-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
-          <img src="images/dual/purple/purple-dual-story-black.png" alt="purple-dual-story-black" class="imgs-main-gr-dual" />
+          <img src="images/dual/purple/purple-dual-story-black.png" alt="purple-dual-story-black"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/purple/purple-dual-story-black.png" download="purple-dual-story-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -555,7 +628,8 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/purple/purple-dual-story-white.png" alt="purple-dual-story-white" class="imgs-main-gr-dual" />
+          <img src="images/dual/purple/purple-dual-story-white.png" alt="purple-dual-story-white"
+            class="imgs-main-gr-dual" />
 
           <a href="images/dual/purple/purple-dual-story-white.png" download="purple-dual-story-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -565,7 +639,7 @@
         <!------------------------------------------------------------------------------------------------------------------------->
 
         <!--------------------------------------------- PINK --------------------------------------------->
-        
+
         <div class="box-imgs white">
           <img src="images/dual/pink/pink-uno-story-black.png" alt="pink-uno-story-black" class="imgs-main-gr-uno" />
 
@@ -581,7 +655,7 @@
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
           </a>
         </div>
-        
+
         <div class="box-imgs white">
           <img src="images/dual/pink/pink-dual-story-black.png" alt="pink-dual-story-black" class="imgs-main-gr-dual" />
 
@@ -605,7 +679,8 @@
 
         <h1>Paróquia</h1>
         <div class="box-imgs white">
-          <img src="images/paroquia/paroquia-layout-deitado-black.png" alt="paroquia-layout-deitado" class="imgs-main" />
+          <img src="images/paroquia/paroquia-layout-deitado-black.png" alt="paroquia-layout-deitado"
+            class="imgs-main" />
 
           <a href="images/paroquia/paroquia-layout-deitado-black.png" download="paroquia-layout-deitado-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -613,7 +688,8 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/paroquia/paroquia-layout-deitado-white.png" alt="paroquia-layout-deitado" class="imgs-main" />
+          <img src="images/paroquia/paroquia-layout-deitado-white.png" alt="paroquia-layout-deitado"
+            class="imgs-main" />
 
           <a href="images/paroquia/paroquia-layout-deitado-white.png" download="paroquia-layout-deitado-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -742,7 +818,7 @@
 
         <div class="container-box-imgs-rd">
           <div class="box-imgs-rd white">
-            <img src="images/rcc/rcc-natal-center-black.png"  alt="rcc-natal-center-black" class="imgs-main-rd-2" />
+            <img src="images/rcc/rcc-natal-center-black.png" alt="rcc-natal-center-black" class="imgs-main-rd-2" />
 
             <a href="images/rcc/rcc-natal-center-black.png" download="rcc-natal-center-black">
               <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black-rd" />
@@ -761,52 +837,82 @@
         <!--------------------------------------------- GRADIENTS/DEGRADES --------------------------------------------->
 
         <h2>Gradients/degradês</h2>
-        <div class="box-imgs white">
+        <div class="box-imgs-nm white">
           <img src="images/gradients/gradient-green.png" alt="gradient-green" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-green.png" download="gradient-green">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-green</p>
+
+            <a href="images/gradients/gradient-green.png" download="gradient-green" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-btt" />
+            </a>
+          </div>
         </div>
-        
-        <div class="box-imgs black">
+
+        <div class="box-imgs-nm black">
           <img src="images/gradients/gradient-white.png" alt="gradient-white" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-white.png" download="gradient-white">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-white</p>
+
+            <a href="images/gradients/gradient-white.png" download="gradient-white" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white download-btt" />
+            </a>
+          </div>
         </div>
 
-        <div class="box-imgs white">
+        <div class="box-imgs-nm white">
           <img src="images/gradients/gradient-gold.png" alt="gradient-gold" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-gold.png" download="gradient-gold">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-gold</p>
+
+            <a href="images/gradients/gradient-gold.png" download="gradient-gold" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-btt" />
+            </a>
+          </div>
         </div>
 
-        <div class="box-imgs black">
+        <div class="box-imgs-nm black">
           <img src="images/gradients/gradient-red.png" alt="gradient-red" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-red.png" download="gradient-red">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-red</p>
+
+            <a href="images/gradients/gradient-red.png" download="gradient-red" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white download-btt" />
+            </a>
+          </div>
         </div>
 
-        <div class="box-imgs white">
-          <img src="images/gradients/gradient-purple.png" alt="gradient-purple.png" class="imgs-main-gr" />
+        <div class="box-imgs-nm white">
+          <img src="images/gradients/gradient-purple.png" alt="gradient-purple" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-purple.png" download="gradient-purple.png">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-purple</p>
+
+            <a href="images/gradients/gradient-purple.png" download="gradient-purple" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-btt" />
+            </a>
+          </div>
         </div>
 
-        <div class="box-imgs black">
-          <img src="images/gradients/gradient-pink.png" alt="gradient-pink.png" class="imgs-main-gr" />
+        <div class="box-imgs-nm black">
+          <img src="images/gradients/gradient-pink.png" alt="gradient-pink" class="imgs-main-gr" />
 
-          <a href="images/gradients/gradient-pink.png" download="gradient-pink.png">
-            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
-          </a>
+          <div class="bottom-infos">
+            <p class="p-infos">gradient-pink</p>
+
+            <a href="images/gradients/gradient-pink.png" download="gradient-pink" style="display: flex; align-items: center;
+            justify-content: center;">
+              <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white download-btt" />
+            </a>
+          </div>
         </div>
 
       </article>
