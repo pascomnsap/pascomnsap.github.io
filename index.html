@@ -25,6 +25,10 @@
       }
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       display: flex;
       align-items: center;
@@ -363,6 +367,10 @@
       background-color: black;
     }
 
+    .menu-click {
+      display: none;
+    }
+
     @media screen and (max-width: 768px) {
       body {
         padding: 0;
@@ -386,12 +394,15 @@
       }
 
       .links {
-        margin-top: 20px;
+        /* margin-top: 20px; */
 
-        display: flex;
+        position: absolute;
+        top: 5px;
+        left: 15px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
-        justify-content: center;
-        flex-direction: row;
         gap: 10px;
       }
 
@@ -703,12 +714,134 @@
 
         z-index: 10;
       }
+
+      nav {
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+        width: 75%;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease-in;
+        /* transition: left 0.4s, cubic-bezier(.1, 0, .2, 1); */
+
+        z-index: 1;
+      }
+
+      .menu-click {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        transition: all 0.2s;
+      }
+
+      .burguer {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+      }
+
+      .cancel {
+        position: relative;
+        right: 17px;
+        top: 15px;
+
+        width: 25px;
+        height: auto;
+        display: none;
+        cursor: pointer;
+      }
+
+      .buttons-links {
+        margin-top: 30%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .box-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        background-color: white;
+        border-radius: 10px;
+
+        width: 90%;
+        padding: 5px 10px;
+      }
+
+      .box-link img {
+        width: 20px;
+        height: auto;
+
+        margin-left: 10px;
+      }
+
+      .buttons-links a {
+        text-decoration: none;
+        text-align: left;
+        color: black;
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .bar {
+        z-index: 10;
+        background-color: rgb(255, 255, 255, 0.6);
+        width: 80px;
+        height: 1px;
+        transform: rotate(0deg);
+        margin: 5px 0px 4.5px 0px;
+      }
+
+      .bar-links {
+        position: absolute;
+        top: 145px;
+        z-index: 10;
+        
+        background-color: rgb(255, 255, 255, 0.6);
+        width: 100%;
+        height: 1px;
+        transform: rotate(0deg);
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
+    <div class="menu-click">
+      <img src="images/icons/burguer-icon.png" alt="burguer-icon.png" class="burguer">
+      <img src="images/icons/cancel-icon.png" alt="cancel-icon.png" class="cancel">
+    </div>
+
     <nav>
       <div class="links">
         <a href="https://letofonts.com/" target="_blank">
@@ -734,6 +867,54 @@
         <a href="https://vdo.ninja/" target="_blank">
           <img src="images/icons/vdoninja-icon.PNG" alt="vdoninja-icon" />
         </a>
+      </div>
+
+      <div class="bar-links"></div>
+
+      <div class="buttons-links">
+        <div class="box-link">
+          <a href="#top" class="links-btn">Topo</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="bar"></div>
+
+        <div class="box-link">
+          <a href="#s&f" class="links-btn">Stories & Feed</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="box-link">
+          <a href="#paroquia" class="links-btn">Paróquia</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="box-link">
+          <a href="#capela" class="links-btn">Capela</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="box-link">
+          <a href="#go" class="links-btn">Grupo de Oração</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="box-link">
+          <a href="#rcc" class="links-btn">RCC</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="box-link">
+          <a href="#gradients" class="links-btn">Gradients/degradês</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
+
+        <div class="bar"></div>
+
+        <div class="box-link">
+          <a href="#footer" class="links-btn">Final</a>
+          <img src="images/icons/link-dark-icon.svg" alt="link-dark-icon">
+        </div>
       </div>
     </nav>
   </header>
@@ -796,11 +977,10 @@
 
         <!--------------------------------------------- Grupo de Oração --------------------------------------------->
 
-        <h3 style="margin-top: 0px;">Stories</h3>
+        <h3 style="margin-top: 0px;" id="s&f">Stories</h3>
         <h3>Grupo de Oração</h3>
         <div class="box-imgs white">
-          <img src="images/dual/go/go-dual-story-black.png" alt="go-dual-story-black"
-            class="imgs-main-gr-dual" />
+          <img src="images/dual/go/go-dual-story-black.png" alt="go-dual-story-black" class="imgs-main-gr-dual" />
 
           <a href="images/dual/go/go-dual-story-black.png" download="go-dual-story-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -808,8 +988,7 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/go/go-dual-story-white.png" alt="go-dual-story-white"
-            class="imgs-main-gr-dual" />
+          <img src="images/dual/go/go-dual-story-white.png" alt="go-dual-story-white" class="imgs-main-gr-dual" />
 
           <a href="images/dual/go/go-dual-story-white.png" download="go-dual-story-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -834,8 +1013,7 @@
         </div>
 
         <div class="box-imgs white">
-          <img src="images/dual/go/go-dual-feed-black.png" alt="go-dual-feed-black"
-            class="imgs-main-gr-dual-feed" />
+          <img src="images/dual/go/go-dual-feed-black.png" alt="go-dual-feed-black" class="imgs-main-gr-dual-feed" />
 
           <a href="images/dual/go/go-dual-feed-black.png" download="go-dual-feed-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -843,8 +1021,7 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/go/go-dual-feed-white.png" alt="go-dual-feed-white"
-            class="imgs-main-gr-dual-feed" />
+          <img src="images/dual/go/go-dual-feed-white.png" alt="go-dual-feed-white" class="imgs-main-gr-dual-feed" />
 
           <a href="images/dual/go/go-dual-feed-white.png" download="go-dual-feed-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -893,7 +1070,8 @@
 
         <h3>Feed</h3>
         <div class="box-imgs white">
-          <img src="images/dual/green/green-uno-feed-black.png" alt="green-uno-feed-black" class="imgs-main-gr-uno-feed" />
+          <img src="images/dual/green/green-uno-feed-black.png" alt="green-uno-feed-black"
+            class="imgs-main-gr-uno-feed" />
 
           <a href="images/dual/green/green-uno-feed-black.png" download="green-uno-feed-black">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
@@ -901,7 +1079,8 @@
         </div>
 
         <div class="box-imgs black">
-          <img src="images/dual/green/green-uno-feed-white.png" alt="green-uno-feed-white" class="imgs-main-gr-uno-feed" />
+          <img src="images/dual/green/green-uno-feed-white.png" alt="green-uno-feed-white"
+            class="imgs-main-gr-uno-feed" />
 
           <a href="images/dual/green/green-uno-feed-white.png" download="green-uno-feed-white">
             <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
@@ -1243,7 +1422,7 @@
 
         <!--------------------------------------------- PARÓQUIA --------------------------------------------->
 
-        <h1>Paróquia</h1>
+        <h1 id="paroquia">Paróquia</h1>
         <div class="box-imgs white">
           <img src="images/paroquia/paroquia-layout-deitado-black.png" alt="paroquia-layout-deitado"
             class="imgs-main" />
@@ -1264,7 +1443,7 @@
 
         <!--------------------------------------------- CAPELA --------------------------------------------->
 
-        <h1>Capela</h1>
+        <h1 id="capela">Capela</h1>
         <div class="box-imgs white">
           <img src="images/capela/capela-layout-deitado-black.png" alt="capela-layout-deitado" class="imgs-main" />
 
@@ -1333,7 +1512,7 @@
 
         <!--------------------------------------------- GRUPO DE ORAÇÃO --------------------------------------------->
 
-        <h1>Grupo de Oração</h1>
+        <h1 id="go">Grupo de Oração</h1>
         <div class="box-imgs white">
           <img src="images/go/go-black.png" alt="go-black" class="imgs-main" />
 
@@ -1352,7 +1531,7 @@
 
         <!--------------------------------------------- RCC --------------------------------------------->
 
-        <h1>RCC</h1>
+        <h1 id="rcc">RCC</h1>
         <div class="box-imgs white">
           <img src="images/rcc/rcc-natal-deitado-black.png" alt="rcc-natal-deitado-black" class="imgs-main" />
 
@@ -1421,7 +1600,7 @@
 
         <!--------------------------------------------- GRADIENTS/DEGRADES --------------------------------------------->
 
-        <h2>Gradients/degradês</h2>
+        <h2 id="gradients">Gradients/degradês</h2>
         <div class="box-imgs-nm white">
           <img src="images/gradients/gradient-green.png" alt="gradient-green" class="imgs-main-gr" />
 
@@ -1543,9 +1722,73 @@
     </section>
   </main>
 
-  <footer></footer>
+  <footer id="footer"></footer>
 
-  <script></script>
+  <script>
+    const burgerIcon = document.querySelector(".burguer");
+    const cancelIcon = document.querySelector(".cancel");
+    const allLinksBtn = document.querySelectorAll(".links-btn");
+    const nav = document.querySelector("nav");
+    const main = document.querySelector("main");
+    // const footer = document.querySelector("footer");
+
+    burgerIcon.addEventListener('click', function () {
+      burgerIcon.style.display = 'none';
+      cancelIcon.style.display = 'block';
+
+      main.style.filter = 'blur(1px)';
+      // footer.style.filter = 'blur(1px)';
+
+      nav.style.opacity = '1';
+      nav.style.pointerEvents = 'visible';
+    });
+
+    cancelIcon.addEventListener('click', function () {
+      burgerIcon.style.display = 'block';
+      cancelIcon.style.display = 'none';
+
+      main.style.filter = 'blur(0px)';
+      // footer.style.filter = 'blur(0px)';
+
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+    });
+
+    main.addEventListener('click', function () {
+      burgerIcon.style.display = 'block';
+      cancelIcon.style.display = 'none';
+
+      main.style.filter = 'blur(0px)';
+      // footer.style.filter = 'blur(0px)';
+
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+    });
+
+    // footer.addEventListener('click', function () {
+    //   burgerIcon.style.display = 'block';
+    //   cancelIcon.style.display = 'none';
+
+    //   main.style.filter = 'blur(0px)';
+    //   // footer.style.filter = 'blur(0px)';
+
+    //   nav.style.opacity = '0';
+    //   nav.style.pointerEvents = 'none';
+    // });
+
+    allLinksBtn.forEach(link => {
+      link.addEventListener('click', function () {
+        burgerIcon.style.display = 'block';
+        cancelIcon.style.display = 'none';
+
+        main.style.filter = 'blur(0px)';
+        // footer.style.filter = 'blur(0px)';
+
+        nav.style.opacity = '0';
+        nav.style.pointerEvents = 'none';
+      });
+    });
+  </script>
 </body>
 
 </html>
