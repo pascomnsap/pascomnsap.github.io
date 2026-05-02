@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -375,6 +375,24 @@
       display: none;
     }
 
+    .transmissao {
+      color: white;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 20px 0px 0px 0px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 5px;
+    }
+
+    .transmissao img {
+      height: auto;
+      width: 15px;
+      filter: invert(1);
+    }
+
     @media screen and (max-width: 768px) {
       body {
         padding: 0;
@@ -563,6 +581,50 @@
         height: auto;
 
         z-index: 2;
+      }
+
+      .box-imgs-mm {
+        position: relative;
+
+        max-width: 100%;
+        height: 610px;
+
+        box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+        border-radius: 10px;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+
+      .box-imgs-mm-feed {
+        position: relative;
+
+        max-width: 100%;
+        height: 440px;
+
+        box-shadow: 0px 0px 10px -2px rgb(0, 0, 0, 0.7);
+        border-radius: 10px;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+
+      .mes-mariano-story {
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        max-width: 100%;
+        height: auto;
+
+        z-index: 2;
+      }
+
+      
+      .mes-mariano-feed {
+        max-width: 100%;
+        top: 220px;
       }
 
       .white {
@@ -841,6 +903,8 @@
 </head>
 
 <body>
+  <a href="transmissao.html" class="transmissao">Sobre transmissão <img src="images/icons/link-externo.png" alt="link-externo.png"></a>
+
   <header>
     <div class="menu-click">
       <img src="images/icons/burguer-icon.png" alt="burguer-icon.png" class="burguer">
@@ -983,6 +1047,44 @@
         <!--------------------------------------------- Grupo de Oração --------------------------------------------->
 
         <h2 style="margin-top: 0px;" id="s&f">Stories</h2>
+
+        <h3>Mês Mariano</h3>
+        <div class="box-imgs-mm black">
+          <img src="images/mes-mariano-26/story-mes-mariano-2026.png" alt="story-mes-mariano-2026.png" class="imgs-main-gr-uno mes-mariano-story" />
+
+          <a href="images/mes-mariano-26/story-mes-mariano-2026.png" download="story-mes-mariano-2026">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" style="background-color: rgb(255, 255, 255, 0.85); padding: 3px;" />
+          </a>
+        </div>
+
+        <h3>Feed</h3>
+        <div class="box-imgs-mm-feed black">
+          <img src="images/mes-mariano-26/feed-mes-mariano-2026.png" alt="feed-mes-mariano-2026.png" class="imgs-main-gr-uno mes-mariano-feed" />
+
+          <a href="images/mes-mariano-26/feed-mes-mariano-2026.png" download="feed-mes-mariano-2026">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" style="background-color: rgb(255, 255, 255, 0.85); padding: 3px;" />
+          </a>
+        </div>
+
+        <!-- <div class="box-imgs white">
+          <img src="images/mes-mariano-26/story-mes-mariano-2026.png" alt="story-mes-mariano-2026.png" class="imgs-main-2" />
+
+          <a href="images/mes-mariano-26/story-mes-mariano-2026.png" download="story-mes-mariano-2026.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-black" />
+          </a>
+        </div>
+
+        <h3>Feed</h3>
+        <div class="box-imgs black">
+          <img src="images/mes-mariano-26/feed-mes-mariano-2026.png" alt="feed-mes-mariano-2026.png" class="imgs-main-2" />
+
+          <a href="images/mes-mariano-26/feed-mes-mariano-2026.png" download="feed-mes-mariano-2026.png">
+            <img src="images/icons/download-icon.svg" alt="download-icon" class="download-white" />
+          </a>
+        </div> -->
+
+
+
         <h3>Grupo de Oração</h3>
         <div class="box-imgs white">
           <img src="images/dual/go/go-dual-story-black.png" alt="go-dual-story-black" class="imgs-main-gr-dual" />
